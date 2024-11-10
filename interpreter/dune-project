@@ -1,0 +1,11 @@
+(lang dune 3.16)
+
+(name interp)
+
+(package
+ (name interp)
+ (depends ocaml dune))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
+
+(using menhir 3.0)
