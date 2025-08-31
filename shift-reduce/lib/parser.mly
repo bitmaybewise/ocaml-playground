@@ -9,12 +9,15 @@
 
 %start <Ast.expr> main
 
+(* Precedence declarations: lower precedence first *)
+%left PLUS
+%left TIMES
+
 %%
 
 main:
   | expr EOF { $1 }
 
-(* This grammar has shift/reduce conflicts! *)
 expr:
   | INT { Int $1 }
   | expr PLUS expr { Add ($1, $3) }
