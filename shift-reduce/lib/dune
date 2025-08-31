@@ -1,0 +1,8 @@
+(library
+ (name shift_reduce))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser)
+ (flags --dump))

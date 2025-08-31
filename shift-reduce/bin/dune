@@ -1,0 +1,4 @@
+(executable
+ (public_name shift-reduce)
+ (name main)
+ (libraries shift_reduce))
